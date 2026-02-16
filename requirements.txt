@@ -1,0 +1,21 @@
+numpy
+pandas
+python-dotenv
+tqdm
+
+# Text emotion
+torch
+transformers
+
+# Image / face emotion
+opencv-python
+pillow
+fer
+
+# Audio emotion
+soundfile
+librosa
+speechbrain
+
+# Kaggle downloader
+kaggle
