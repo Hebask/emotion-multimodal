@@ -19,3 +19,8 @@ speechbrain
 
 # Kaggle downloader
 kaggle
+
+fastapi
+uvicorn
+python-multipart
+
