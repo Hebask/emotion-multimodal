@@ -1,0 +1,18 @@
+{
+  "text": {
+    "slug": "debarshichanda/goemotions",
+    "out": "data/raw/text_goemotions"
+  },
+  "image": {
+    "slug": "deadskull7/fer2013",
+    "out": "data/raw/image_fer2013"
+  },
+  "audio": {
+    "slug": "uwrfkaggler/ravdess-emotional-speech-audio",
+    "out": "data/raw/audio_ravdess_speech"
+  },
+  "video": {
+    "slug": "unidpro/video-emotion-recognition-dataset",
+    "out": "data/raw/video_emotion"
+  }
+}

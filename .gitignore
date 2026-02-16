@@ -17,11 +17,18 @@ build/
 .DS_Store
 Thumbs.db
 
-# Data / models (don't push big files)
+# Kaggle / datasets / artifacts
 data/
-samples/*.wav
-samples/*.mp3
-samples/*.mp4
+*.zip
+*.tar
+*.tar.gz
+
+# model artifacts (if you train later)
+*.pt
+*.pth
+*.onnx
+*.h5
+*.ckpt
 
 # HuggingFace cache (big)
 .cache/
