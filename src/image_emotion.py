@@ -15,7 +15,7 @@ _detector = None
 def _get_detector():
     global _detector
     if _detector is None:
-        _detector = FER(mtcnn=True)
+        _detector = FER(mtcnn=False)
     return _detector
 
 def _read_image_any(path: str):

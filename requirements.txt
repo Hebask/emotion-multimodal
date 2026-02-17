@@ -1,10 +1,11 @@
 numpy
 pandas
-python-dotenv
 tqdm
+python-dotenv
 
-# Text emotion
+# HuggingFace
 torch
+torchaudio
 transformers
 
 # Image / face emotion
@@ -12,15 +13,14 @@ opencv-python
 pillow
 fer
 
-# Audio emotion
-soundfile
+# Audio
 librosa
-speechbrain
+soundfile
 
 # Kaggle downloader
 kaggle
 
+# API
 fastapi
 uvicorn
 python-multipart
-

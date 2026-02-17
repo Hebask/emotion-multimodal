@@ -1,35 +1,19 @@
-# Python
+# --- Python ---
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
-*.egg-info/
-dist/
-build/
 
-# Venv
+# --- Virtual environments ---
 .venv/
+venv/
 
-# VS Code
+# --- Data / datasets ---
+data/
+datasets/
+
+# --- OS / editor ---
+.DS_Store
 .vscode/
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Kaggle / datasets / artifacts
-data/
-*.zip
-*.tar
-*.tar.gz
-
-# model artifacts (if you train later)
-*.pt
-*.pth
-*.onnx
-*.h5
-*.ckpt
-
-# HuggingFace cache (big)
-.cache/
-**/.cache/
+# --- Logs ---
+*.log

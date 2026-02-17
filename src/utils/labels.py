@@ -1,40 +1,42 @@
+import re
 
-# Common “basic” emotions set:
-CANONICAL = [
-    "angry",
-    "disgust",
-    "fear",
-    "happy",
-    "sad",
-    "surprise",
-    "neutral",
-]
+_CANONICAL = {
+    "angry": "anger",
+    "anger": "anger",
+    "mad": "anger",
 
-# Map common model labels
-LABEL_MAP = {
-    # Text model
-    "anger": "angry",
-    "angry": "angry",
-    "disgust": "disgust",
+    "happy": "joy",
+    "happiness": "joy",
+    "joy": "joy",
+
+    "sad": "sadness",
+    "sadness": "sadness",
+
     "fear": "fear",
-    "joy": "happy",
-    "happy": "happy",
-    "sadness": "sad",
-    "sad": "sad",
-    "surprise": "surprise",
-    "neutral": "neutral",
+    "fearful": "fear",
 
-    # SpeechBrain
-    "hap": "happy",
-    "ang": "angry",
-    "sad": "sad",
-    "neu": "neutral",
-    "exc": "happy",   
-    "fru": "angry",  
+    "disgust": "disgust",
+    "disgusted": "disgust",
+
+    "surprise": "surprise",
+    "surprised": "surprise",
+
+    "neutral": "neutral",
+    "calm": "neutral",
 }
 
 def to_canonical(label: str) -> str:
-    if not label:
+    if label is None:
         return "unknown"
-    key = label.strip().lower()
-    return LABEL_MAP.get(key, key)
+    s = str(label).strip().lower()
+    s = re.sub(r"[^a-z0-9_\- ]+", "", s)
+    s = s.replace("_", " ").replace("-", " ").strip()
+
+    if s.startswith("label"):
+        return "unknown"
+
+    if s in _CANONICAL:
+        return _CANONICAL[s]
+
+    token = s.split()[0] if s else ""
+    return _CANONICAL.get(token, s if s else "unknown")
